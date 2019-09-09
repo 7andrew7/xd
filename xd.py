@@ -58,9 +58,6 @@ def do_slice(src, deltas, offset, size):
     position = 0
     ret = bytes()
 
-#    indent = '   ' * (3 - len(deltas))
-#    print("%sdo_slice(%d, %d)" % (indent, offset, size))
-
     # Fast forward to the first chunk with relevant data
     for index, instruction in enumerate(delta):
         chunk_length = instruction[2]
